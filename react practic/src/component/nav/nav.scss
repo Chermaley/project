@@ -1,0 +1,11 @@
+.navbar {
+    width: 100%;
+    background-color: yellow;
+    grid-area: nav;
+    &__item{
+        margin-top: 5px;
+        &:last-child{
+            margin-top: 20px;
+        }
+    }
+}
