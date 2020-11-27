@@ -11,9 +11,13 @@
     grid-template-columns: 2fr 10fr;
     grid-template-rows: 60px 1fr;
     grid-gap: 10px;
-    grid-template-areas: 
+    grid-template-areas:
     "header header header"
     "nav content content";
+}
+.app-wrapper-content{
+    grid-area: content;
+    background-color: green;
 }
 
 

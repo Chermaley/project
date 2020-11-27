@@ -6,11 +6,13 @@ import Dialogs from "../dialogs";
 import './app.scss';
 const App = () => {
     return (
-        <div  className='app'>
+        <div className='app'>
             <Header/>
             <NavBar/>
-            {/*<Profile/>*/}
-            <Dialogs/>
+            <div className='app-wrapper-content'>
+                {/*<Profile/>*/}
+                <Dialogs/>
+            </div>
         </div>
     );
 };
