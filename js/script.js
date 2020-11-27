@@ -1,24 +1,41 @@
-"use strict";
-let number = 4; 
-console.log('string'*9);
 
-const person = "Alex";
-const bool = false;
+const people = [
+    {name: 'August', age: 25, budget: 4000},
+    {name: 'Rick', age: 14, budget: 4200},
+    {name: 'Elena', age: 27, budget: 1000},
+    {name: 'Andrey', age: 15, budget: 8000},
+];
 
-const obj = {
-    name: "John",
-    age: 25
-};
-console.log(obj.age);
-//alert('Hello')
-//const result = confirm("Are you here?");
-//console.log(result);
-//const answer = +prompt("Вам есть 18?", "");
-//console.log(answer);
+for (let i = 0; i < people.length; i++) {
+    console.log(people[i]);
+}
 
-const answer = [];
+people.forEach(person => console.log(person));
 
-answer[0] = prompt("How are you?", "" );
-answer[1] = prompt("How ?", "" );
-answer[2] = prompt("are you?", "" );
-document.write(answer);
+
+const adults = people.filter(person => person.age >= 18);
+console.log(adults);
+
+// for (let i = 0; i < people.length; i++) {
+//     amount += people[i].budget;
+// }
+
+const amount = people.reduce((total, person) => total + person.budget, 0);
+
+//find
+const Rick = people.find(person => person.name === 'Rick');
+
+console.log(Rick);
+
+
+
+
+people
+    .filter(person => person.budget > 10000)
+    .map(person => {
+        return{
+            info: `${person.name} ${person.age}`,
+            budget: person.budget
+        };
+
+    });
